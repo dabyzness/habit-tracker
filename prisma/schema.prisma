@@ -23,6 +23,17 @@ model User {
   account   Account?
 }
 
+model Task {
+  id        String  @id @default(cuid())
+  name      String
+  type      Type
+}
+
+enum Type {
+  HYGIENE
+  HEALTH
+}
+
 enum Hygiene {
   ORAL
   SKIN
